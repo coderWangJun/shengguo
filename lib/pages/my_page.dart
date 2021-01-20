@@ -71,6 +71,7 @@ class _MyPage extends State<MyPage> {
     //     removeTop: true, context: context, child: Scaffold());
     // MediaQuery.removePadding(context,context,child:Scaffold(),removeTop: true)
     return Scaffold(
+      backgroundColor: Color.fromRGBO(255, 66, 65, 1.0),
       body: ListView(
         children: <Widget>[
           // 顶部区域
@@ -293,537 +294,555 @@ class _MyPage extends State<MyPage> {
               ],
             ),
           ),
-          // 订单区域
           Container(
-            height: ScreenAdapter.height(242),
-            width: ScreenAdapter.width(706),
-            margin: EdgeInsets.only(
-              left: ScreenAdapter.width(22),
-              right: ScreenAdapter.width(22),
-              bottom: ScreenAdapter.width(20),
-            ),
-            padding: EdgeInsets.only(
-              top: ScreenAdapter.width(35),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                ScreenAdapter.width(25),
-              ),
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
+            color: Colors.white,
             child: Column(
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Container(
-                      height: ScreenAdapter.width(35),
-                      padding: EdgeInsets.only(
-                        left: ScreenAdapter.width(22),
-                      ),
-                      child: Text(
-                        "我的订单",
-                        style: TextStyle(
-                          color: Color.fromRGBO(51, 51, 51, 1.0),
-                          fontSize: ScreenAdapter.size(26),
-                        ),
-                      ),
+                // 订单区域
+                Container(
+                  height: ScreenAdapter.height(242),
+                  width: ScreenAdapter.width(706),
+                  margin: EdgeInsets.only(
+                    left: ScreenAdapter.width(22),
+                    right: ScreenAdapter.width(22),
+                    bottom: ScreenAdapter.width(20),
+                  ),
+                  padding: EdgeInsets.only(
+                    top: ScreenAdapter.width(35),
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      ScreenAdapter.width(25),
                     ),
-                    Container(
-                      height: ScreenAdapter.width(35),
-                      padding: EdgeInsets.only(
-                        right: ScreenAdapter.width(38),
-                      ),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text(
-                              "查看全部",
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(
+                            height: ScreenAdapter.width(35),
+                            padding: EdgeInsets.only(
+                              left: ScreenAdapter.width(22),
+                            ),
+                            child: Text(
+                              "我的订单",
                               style: TextStyle(
-                                color: Color.fromRGBO(153, 153, 153, 1.0),
-                                fontSize: ScreenAdapter.size(24),
+                                color: Color.fromRGBO(51, 51, 51, 1.0),
+                                fontSize: ScreenAdapter.size(26),
                               ),
                             ),
-                            Icon(
-                              IconfontsWidget.jiantouright,
-                              color: Color.fromRGBO(153, 153, 153, 1.0),
-                              size: ScreenAdapter.size(24),
+                          ),
+                          Container(
+                            height: ScreenAdapter.width(35),
+                            padding: EdgeInsets.only(
+                              right: ScreenAdapter.width(38),
                             ),
-                          ]),
-                    )
-                  ],
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text(
+                                    "查看全部",
+                                    style: TextStyle(
+                                      color: Color.fromRGBO(153, 153, 153, 1.0),
+                                      fontSize: ScreenAdapter.size(24),
+                                    ),
+                                  ),
+                                  Icon(
+                                    IconfontsWidget.jiantouright,
+                                    color: Color.fromRGBO(153, 153, 153, 1.0),
+                                    size: ScreenAdapter.size(24),
+                                  ),
+                                ]),
+                          )
+                        ],
+                      ),
+                      Container(
+                        width: ScreenAdapter.width(706),
+                        height: ScreenAdapter.height(150),
+                        padding: EdgeInsets.only(
+                          top: ScreenAdapter.width(20),
+                          bottom: ScreenAdapter.width(20),
+                          left: ScreenAdapter.width(44),
+                          right: ScreenAdapter.width(44),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                    context,
+                                    "/order",
+                                    arguments: {
+                                      "type": 2,
+                                    },
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/order1.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '全部订单',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                      bottom: ScreenAdapter.height(15),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/icon/order2.png',
+                                      fit: BoxFit.cover,
+                                      width: ScreenAdapter.width(50),
+                                      height: ScreenAdapter.width(50),
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      '即将到账',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(51, 51, 51, 1.0),
+                                        fontSize: ScreenAdapter.width(24),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                      bottom: ScreenAdapter.height(15),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/icon/order3.png',
+                                      fit: BoxFit.cover,
+                                      width: ScreenAdapter.width(50),
+                                      height: ScreenAdapter.width(50),
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      '已到账',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(51, 51, 51, 1.0),
+                                        fontSize: ScreenAdapter.width(24),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                      bottom: ScreenAdapter.height(15),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/icon/order4.png',
+                                      fit: BoxFit.cover,
+                                      width: ScreenAdapter.width(50),
+                                      height: ScreenAdapter.width(50),
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      '无效订单',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(51, 51, 51, 1.0),
+                                        fontSize: ScreenAdapter.width(24),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
+                // 轮播图
                 Container(
                   width: ScreenAdapter.width(706),
-                  height: ScreenAdapter.height(150),
+                  height: ScreenAdapter.height(167),
+                  margin: EdgeInsets.only(
+                    left: ScreenAdapter.width(22),
+                    right: ScreenAdapter.width(22),
+                    bottom: ScreenAdapter.width(20),
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      ScreenAdapter.width(25),
+                    ),
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  // AspectRatio 配置轮播图宽高比
+                  child: AspectRatio(
+                    aspectRatio: 706 / 167,
+                    child: Swiper(
+                      itemBuilder: (BuildContext context, int index) {
+                        return new Image.network(
+                          'https://zf.xianlady.com/uploads/article/model/202005/29/20200529170632654212750.png',
+                          fit: BoxFit.fill,
+                        );
+                      },
+                      itemCount: 1, //轮播图个数
+                      // pagination: new SwiperPagination(), //分页器
+                      autoplay: false, //是否自动轮播
+                    ),
+                  ),
+                ),
+                // 底部菜单
+                Container(
+                  height: ScreenAdapter.height(336),
+                  width: ScreenAdapter.width(706),
+                  margin: EdgeInsets.only(
+                    left: ScreenAdapter.width(22),
+                    right: ScreenAdapter.width(22),
+                    bottom: ScreenAdapter.width(20),
+                  ),
                   padding: EdgeInsets.only(
                     top: ScreenAdapter.width(20),
                     bottom: ScreenAdapter.width(20),
                     left: ScreenAdapter.width(44),
                     right: ScreenAdapter.width(44),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              "/order",
-                              arguments: {
-                                "type": 2,
-                              },
-                            );
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/order1.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  '全部订单',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(
-                                bottom: ScreenAdapter.height(15),
-                              ),
-                              child: Image.asset(
-                                'assets/icon/order2.png',
-                                fit: BoxFit.cover,
-                                width: ScreenAdapter.width(50),
-                                height: ScreenAdapter.width(50),
-                              ),
-                            ),
-                            Container(
-                              child: Text(
-                                '即将到账',
-                                style: TextStyle(
-                                  color: Color.fromRGBO(51, 51, 51, 1.0),
-                                  fontSize: ScreenAdapter.width(24),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(
-                                bottom: ScreenAdapter.height(15),
-                              ),
-                              child: Image.asset(
-                                'assets/icon/order3.png',
-                                fit: BoxFit.cover,
-                                width: ScreenAdapter.width(50),
-                                height: ScreenAdapter.width(50),
-                              ),
-                            ),
-                            Container(
-                              child: Text(
-                                '已到账',
-                                style: TextStyle(
-                                  color: Color.fromRGBO(51, 51, 51, 1.0),
-                                  fontSize: ScreenAdapter.width(24),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(
-                                bottom: ScreenAdapter.height(15),
-                              ),
-                              child: Image.asset(
-                                'assets/icon/order4.png',
-                                fit: BoxFit.cover,
-                                width: ScreenAdapter.width(50),
-                                height: ScreenAdapter.width(50),
-                              ),
-                            ),
-                            Container(
-                              child: Text(
-                                '无效订单',
-                                style: TextStyle(
-                                  color: Color.fromRGBO(51, 51, 51, 1.0),
-                                  fontSize: ScreenAdapter.width(24),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      ScreenAdapter.width(25),
+                    ),
+                    color: Color.fromRGBO(255, 255, 255, 1),
                   ),
-                ),
-              ],
-            ),
-          ),
-          // 轮播图
-          Container(
-            width: ScreenAdapter.width(706),
-            height: ScreenAdapter.height(167),
-            margin: EdgeInsets.only(
-              left: ScreenAdapter.width(22),
-              right: ScreenAdapter.width(22),
-              bottom: ScreenAdapter.width(20),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                ScreenAdapter.width(25),
-              ),
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            // AspectRatio 配置轮播图宽高比
-            child: AspectRatio(
-              aspectRatio: 706 / 167,
-              child: Swiper(
-                itemBuilder: (BuildContext context, int index) {
-                  return new Image.network(
-                    'https://zf.xianlady.com/uploads/article/model/202005/29/20200529170632654212750.png',
-                    fit: BoxFit.fill,
-                  );
-                },
-                itemCount: 1, //轮播图个数
-                // pagination: new SwiperPagination(), //分页器
-                autoplay: false, //是否自动轮播
-              ),
-            ),
-          ),
-          // 底部菜单
-          Container(
-            height: ScreenAdapter.height(336),
-            width: ScreenAdapter.width(706),
-            margin: EdgeInsets.only(
-              left: ScreenAdapter.width(22),
-              right: ScreenAdapter.width(22),
-              bottom: ScreenAdapter.width(20),
-            ),
-            padding: EdgeInsets.only(
-              top: ScreenAdapter.width(20),
-              bottom: ScreenAdapter.width(20),
-              left: ScreenAdapter.width(44),
-              right: ScreenAdapter.width(44),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                ScreenAdapter.width(25),
-              ),
-              color: Color.fromRGBO(255, 255, 255, 1),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  height: ScreenAdapter.height(138),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/commonProblem');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu1.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
+                        height: ScreenAdapter.height(138),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, '/commonProblem');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu1.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '常见问题',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              Container(
-                                child: Text(
-                                  '常见问题',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/notice');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu2.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '官方公告',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
-                              )
-                            ],
-                          ),
+                              ),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/kefu');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu3.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '联系客服',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/suggestions');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu4.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '投诉建议',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/notice');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu2.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  '官方公告',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/kefu');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu3.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
+                        height: ScreenAdapter.height(138),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/collection');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu5.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '收藏',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              Container(
-                                child: Text(
-                                  '联系客服',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/suggestions');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu4.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  '投诉建议',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: ScreenAdapter.height(138),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/collection');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu5.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/myFans');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu6.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '我的粉丝',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              Container(
-                                child: Text(
-                                  '收藏',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/myFans');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu6.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  '我的粉丝',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/invite');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu7.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/invite');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu7.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        ' 邀请赚钱 ',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              Container(
-                                child: Text(
-                                  ' 邀请赚钱 ',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(150),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/setting');
-                          },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  bottom: ScreenAdapter.height(15),
-                                ),
-                                child: Image.asset(
-                                  'assets/icon/mymenu8.png',
-                                  fit: BoxFit.cover,
-                                  width: ScreenAdapter.width(50),
-                                  height: ScreenAdapter.width(50),
+                            ),
+                            Container(
+                              width: ScreenAdapter.width(150),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/setting');
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                        bottom: ScreenAdapter.height(15),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/icon/mymenu8.png',
+                                        fit: BoxFit.cover,
+                                        width: ScreenAdapter.width(50),
+                                        height: ScreenAdapter.width(50),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        ' 设置 ',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(51, 51, 51, 1.0),
+                                          fontSize: ScreenAdapter.width(24),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              Container(
-                                child: Text(
-                                  ' 设置 ',
-                                  style: TextStyle(
-                                    color: Color.fromRGBO(51, 51, 51, 1.0),
-                                    fontSize: ScreenAdapter.width(24),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
