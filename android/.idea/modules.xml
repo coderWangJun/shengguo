@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" group="android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="android/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1192845515/flutter_statusbarcolor.iml" filepath="$PROJECT_DIR$/.idea/modules/-1192845515/flutter_statusbarcolor.iml" group="android/flutter_statusbarcolor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1887242845/fluttertoast.iml" filepath="$PROJECT_DIR$/.idea/modules/1887242845/fluttertoast.iml" group="android/fluttertoast" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1779889154/fluwx.iml" filepath="$PROJECT_DIR$/.idea/modules/-1779889154/fluwx.iml" group="android/fluwx" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1761875892/shared_preferences.iml" filepath="$PROJECT_DIR$/.idea/modules/-1761875892/shared_preferences.iml" group="android/shared_preferences" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-965170906/sqflite.iml" filepath="$PROJECT_DIR$/.idea/modules/-965170906/sqflite.iml" group="android/sqflite" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1146060264/url_launcher.iml" filepath="$PROJECT_DIR$/.idea/modules/1146060264/url_launcher.iml" group="android/url_launcher" />
+    </modules>
+  </component>
+</project>
