@@ -39,6 +39,8 @@ class MyApp extends StatelessWidget {
         // 主题
         primaryColor: Color.fromRGBO(255, 76, 65, 1),
         scaffoldBackgroundColor: Color.fromRGBO(255, 255, 255, 1.0),
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
         appBarTheme: AppBarTheme(
           color: Color.fromRGBO(255, 66, 65, 1.0),
           brightness: Brightness.dark,
