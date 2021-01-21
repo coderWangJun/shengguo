@@ -1,5 +1,6 @@
 // 订单页面
 import 'package:flutter/material.dart';
+import 'package:shengguo/widget/appbarLeading.dart';
 import 'package:shengguo/widget/iconFontWidget.dart';
 import '../../services/screenAdapter.dart';
 import '../../config/http_config.dart';
@@ -475,14 +476,7 @@ class _OrderPageState extends State<OrderPage> {
             fontSize: ScreenAdapter.width(36),
           ),
         ),
-        leading: InkWell(
-          child: Icon(
-            IconfontsWidget.jiantouleft,
-            color: Color.fromRGBO(255, 255, 255, 1.0),
-            size: ScreenAdapter.width(36.0),
-          ),
-          onTap: () {},
-        ),
+        leading: AppbarLeading(),
         backgroundColor: Color.fromRGBO(255, 76, 65, 1.0),
         elevation: 0,
         centerTitle: true,
