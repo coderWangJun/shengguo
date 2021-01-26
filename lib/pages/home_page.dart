@@ -375,7 +375,8 @@ class _HomePageState extends State<HomePage>
     ScreenAdapter.init(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color.fromRGBO(255, 66, 65, 1.0),
+        // backgroundColor: Colors.transparent,
         elevation: 0,
         title: InkWell(
           child: Container(

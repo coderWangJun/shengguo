@@ -19,3 +19,6 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+#自定义忽略文件（注解生成文件、包管理文件）
+**/.flutter-plugins-dependencies

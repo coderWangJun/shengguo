@@ -12,6 +12,7 @@ class _TaskPage extends State<TaskPage> {
   Widget build(BuildContext context) {
     ScreenAdapter.init(context);
     return Scaffold(
+      backgroundColor: Color.fromRGBO(255, 66, 65, 1.0),
       body: ListView(
         children: <Widget>[
           // 头部区域
@@ -489,172 +490,175 @@ class _TaskPage extends State<TaskPage> {
           ),
           // 底部任务区域
           Container(
-            width: ScreenAdapter.width(690),
-            margin: EdgeInsets.only(
-              left: ScreenAdapter.width(30),
-              right: ScreenAdapter.width(30),
-              bottom: ScreenAdapter.width(30),
-            ),
-            padding: EdgeInsets.only(
-              left: ScreenAdapter.width(30),
-              right: ScreenAdapter.width(30),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                ScreenAdapter.width(25),
+            color: Colors.white,
+            child: Container(
+              width: ScreenAdapter.width(690),
+              margin: EdgeInsets.only(
+                left: ScreenAdapter.width(30),
+                right: ScreenAdapter.width(30),
+                bottom: ScreenAdapter.width(40),
               ),
-              color: Color.fromRGBO(255, 255, 255, 1.0),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  child: ListTile(
-                    title: Text(
-                      "来坐任务",
-                      style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 1.0),
-                        fontSize: ScreenAdapter.size(34),
-                      ),
-                    ),
-                    subtitle: Text(
-                      "复制链接",
-                      style: TextStyle(
-                        color: Color.fromRGBO(102, 102, 102, 1.0),
-                        fontSize: ScreenAdapter.size(26),
-                      ),
-                    ),
-                    contentPadding: EdgeInsets.only(
-                      top: ScreenAdapter.width(13),
-                      bottom: ScreenAdapter.width(13),
-                    ),
-                    trailing: Container(
-                      height: ScreenAdapter.height(60),
-                      width: ScreenAdapter.width(180),
-                      child: RaisedButton(
-                        color: Color.fromRGBO(255, 66, 65, 1.0),
-                        onPressed: () {
-                          print('去完成');
-                        },
-                        elevation: 0,
-                        child: Text(
-                          '去完成',
-                          style: TextStyle(
-                            fontSize: ScreenAdapter.size(28),
-                            color: Color.fromRGBO(255, 255, 255, 1.0),
-                          ),
+              padding: EdgeInsets.only(
+                left: ScreenAdapter.width(30),
+                right: ScreenAdapter.width(30),
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  ScreenAdapter.width(25),
+                ),
+                color: Color.fromRGBO(255, 255, 255, 1.0),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                    child: ListTile(
+                      title: Text(
+                        "来坐任务",
+                        style: TextStyle(
+                          color: Color.fromRGBO(0, 0, 0, 1.0),
+                          fontSize: ScreenAdapter.size(34),
                         ),
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide.none,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(60),
+                      ),
+                      subtitle: Text(
+                        "复制链接",
+                        style: TextStyle(
+                          color: Color.fromRGBO(102, 102, 102, 1.0),
+                          fontSize: ScreenAdapter.size(26),
+                        ),
+                      ),
+                      contentPadding: EdgeInsets.only(
+                        top: ScreenAdapter.width(13),
+                        bottom: ScreenAdapter.width(13),
+                      ),
+                      trailing: Container(
+                        height: ScreenAdapter.height(60),
+                        width: ScreenAdapter.width(180),
+                        child: RaisedButton(
+                          color: Color.fromRGBO(255, 66, 65, 1.0),
+                          onPressed: () {
+                            print('去完成');
+                          },
+                          elevation: 0,
+                          child: Text(
+                            '去完成',
+                            style: TextStyle(
+                              fontSize: ScreenAdapter.size(28),
+                              color: Color.fromRGBO(255, 255, 255, 1.0),
+                            ),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide.none,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(60),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Divider(
-                  color: Color.fromRGBO(220, 220, 220, 1.0),
-                  height: 0,
-                ),
-                Container(
-                  child: ListTile(
-                    title: Text(
-                      "来坐任务",
-                      style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 1.0),
-                        fontSize: ScreenAdapter.size(34),
-                      ),
-                    ),
-                    subtitle: Text(
-                      "复制链接",
-                      style: TextStyle(
-                        color: Color.fromRGBO(102, 102, 102, 1.0),
-                        fontSize: ScreenAdapter.size(26),
-                      ),
-                    ),
-                    contentPadding: EdgeInsets.only(
-                      top: ScreenAdapter.width(13),
-                      bottom: ScreenAdapter.width(13),
-                    ),
-                    trailing: Container(
-                      height: ScreenAdapter.height(60),
-                      width: ScreenAdapter.width(180),
-                      child: RaisedButton(
-                        color: Color.fromRGBO(255, 66, 65, 1.0),
-                        onPressed: () {
-                          print('去完成');
-                        },
-                        elevation: 0,
-                        child: Text(
-                          '去完成',
-                          style: TextStyle(
-                            fontSize: ScreenAdapter.size(28),
-                            color: Color.fromRGBO(255, 255, 255, 1.0),
-                          ),
+                  Divider(
+                    color: Color.fromRGBO(220, 220, 220, 1.0),
+                    height: 0,
+                  ),
+                  Container(
+                    child: ListTile(
+                      title: Text(
+                        "来坐任务",
+                        style: TextStyle(
+                          color: Color.fromRGBO(0, 0, 0, 1.0),
+                          fontSize: ScreenAdapter.size(34),
                         ),
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide.none,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(60),
+                      ),
+                      subtitle: Text(
+                        "复制链接",
+                        style: TextStyle(
+                          color: Color.fromRGBO(102, 102, 102, 1.0),
+                          fontSize: ScreenAdapter.size(26),
+                        ),
+                      ),
+                      contentPadding: EdgeInsets.only(
+                        top: ScreenAdapter.width(13),
+                        bottom: ScreenAdapter.width(13),
+                      ),
+                      trailing: Container(
+                        height: ScreenAdapter.height(60),
+                        width: ScreenAdapter.width(180),
+                        child: RaisedButton(
+                          color: Color.fromRGBO(255, 66, 65, 1.0),
+                          onPressed: () {
+                            print('去完成');
+                          },
+                          elevation: 0,
+                          child: Text(
+                            '去完成',
+                            style: TextStyle(
+                              fontSize: ScreenAdapter.size(28),
+                              color: Color.fromRGBO(255, 255, 255, 1.0),
+                            ),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide.none,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(60),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Divider(
-                  color: Color.fromRGBO(220, 220, 220, 1.0),
-                  height: 0,
-                ),
-                Container(
-                  child: ListTile(
-                    title: Text(
-                      "来坐任务",
-                      style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 1.0),
-                        fontSize: ScreenAdapter.size(34),
-                      ),
-                    ),
-                    subtitle: Text(
-                      "复制链接",
-                      style: TextStyle(
-                        color: Color.fromRGBO(102, 102, 102, 1.0),
-                        fontSize: ScreenAdapter.size(26),
-                      ),
-                    ),
-                    contentPadding: EdgeInsets.only(
-                      top: ScreenAdapter.width(13),
-                      bottom: ScreenAdapter.width(13),
-                    ),
-                    trailing: Container(
-                      height: ScreenAdapter.height(60),
-                      width: ScreenAdapter.width(180),
-                      child: RaisedButton(
-                        color: Color.fromRGBO(255, 66, 65, 1.0),
-                        onPressed: () {
-                          print('去完成');
-                        },
-                        elevation: 0,
-                        child: Text(
-                          '去完成',
-                          style: TextStyle(
-                            fontSize: ScreenAdapter.size(28),
-                            color: Color.fromRGBO(255, 255, 255, 1.0),
-                          ),
+                  Divider(
+                    color: Color.fromRGBO(220, 220, 220, 1.0),
+                    height: 0,
+                  ),
+                  Container(
+                    child: ListTile(
+                      title: Text(
+                        "来坐任务",
+                        style: TextStyle(
+                          color: Color.fromRGBO(0, 0, 0, 1.0),
+                          fontSize: ScreenAdapter.size(34),
                         ),
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide.none,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(60),
+                      ),
+                      subtitle: Text(
+                        "复制链接",
+                        style: TextStyle(
+                          color: Color.fromRGBO(102, 102, 102, 1.0),
+                          fontSize: ScreenAdapter.size(26),
+                        ),
+                      ),
+                      contentPadding: EdgeInsets.only(
+                        top: ScreenAdapter.width(13),
+                        bottom: ScreenAdapter.width(13),
+                      ),
+                      trailing: Container(
+                        height: ScreenAdapter.height(60),
+                        width: ScreenAdapter.width(180),
+                        child: RaisedButton(
+                          color: Color.fromRGBO(255, 66, 65, 1.0),
+                          onPressed: () {
+                            print('去完成');
+                          },
+                          elevation: 0,
+                          child: Text(
+                            '去完成',
+                            style: TextStyle(
+                              fontSize: ScreenAdapter.size(28),
+                              color: Color.fromRGBO(255, 255, 255, 1.0),
+                            ),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide.none,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(60),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
